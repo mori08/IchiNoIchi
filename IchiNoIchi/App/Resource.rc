@@ -128,4 +128,5 @@ Resource(engine/soundfont/GMGSx.sf2.zstdcmp)
 //////////////////////////////////////////////////////
 
 // from here
+Resource(asset/data/config.toml)
 Resource(asset/list)
