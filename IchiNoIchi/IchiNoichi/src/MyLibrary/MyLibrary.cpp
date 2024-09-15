@@ -40,9 +40,7 @@ namespace IchiNoIchi
 		TextWriter resourceWriter(U"Resource.rc");
 		for (const auto& line : resourceList) { resourceWriter.writeln(line); }
 		resourceWriter.close();
-		return;
-#endif // _DEBUG
-
+#else
 		TextReader reader(Resource(U"asset/list"));
 		while (auto line = reader.readLine())
 		{
@@ -59,5 +57,15 @@ namespace IchiNoIchi
 				AudioAsset::Register(FileSystem::BaseName(content), Resource(content));
 			}
 		}
+#endif // _DEBUG
+	}
+
+	FilePath assetPath(const FilePath& assetPath)
+	{
+#ifdef _DEBUG
+		return U"asset/" + assetPath;
+#else
+		return Resource(U"asset/" + assetPath);
+#endif // _DEBUG
 	}
 }
