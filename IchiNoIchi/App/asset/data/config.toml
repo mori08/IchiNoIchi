@@ -1,2 +1,41 @@
-[A]
-	x = 1
+[DividingBlockDrawer]
+	offset = [
+			{x = +1, y = +1},
+			{x = -1, y = +1},
+			{x = -1, y = -1},
+			{x = +1, y = -1},
+			{x = +2, y = +1},
+			{x = -2, y = +1},
+			{x = -2, y = -1},
+			{x = +2, y = -1},
+		]
+	[DividingBlockDrawer.Default]
+		outsideAlpha = 0
+		goalUpdateFrequency = 0
+		upAlphaRate = 0
+		downAlphaRate = 0
+	[DividingBlockDrawer.BlackIn] # 中心に向かって黒く
+		outsideAlpha = 1.0
+		goalUpdateFrequency = 10
+		upAlphaRate = 0
+		downAlphaRate = 0.1
+	[DividingBlockDrawer.BlackOut] # 外に向かって黒く
+		outsideAlpha = 0.0
+		goalUpdateFrequency = 30
+		upAlphaRate = 0
+		downAlphaRate = 1
+	[DividingBlockDrawer.WhiteIn] # 中心に向かって白く
+		outsideAlpha = 0
+		goalUpdateFrequency = 10
+		upAlphaRate = 0.1
+		downAlphaRate = 0
+	[DividingBlockDrawer.Past] # 画面の縁が少し黒く
+		outsideAlpha = 0.5
+		goalUpdateFrequency = 0.1
+		upAlphaRate = 0.9
+		downAlphaRate = 0.01
+	[DividingBlockDrawer.Click] # クリックした場所が黒く
+		outsideAlpha = 0.0
+		goalUpdateFrequency = 10
+		upAlphaRate = 0.2
+		downAlphaRate = 0.01

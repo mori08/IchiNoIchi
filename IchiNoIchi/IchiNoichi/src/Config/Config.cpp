@@ -46,6 +46,9 @@ namespace IchiNoIchi
 
 	Config Config::addTableConfig(StringView tableKey)
 	{
-		return Config(m_classKey, m_tableKey + U"." + tableKey);
+		return Config(
+			m_classKey,
+			(m_tableKey.empty() ? U"" : m_tableKey + U".") + tableKey
+		);
 	}
 }
