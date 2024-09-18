@@ -1,2 +1,3 @@
 ﻿asset/data/config.toml
 asset/list
+asset/shader/DividingBlockDrawer.hlsl

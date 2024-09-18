@@ -68,4 +68,24 @@ namespace IchiNoIchi
 		return Resource(U"asset/" + assetPath);
 #endif // _DEBUG
 	}
+
+	Array<Point> getGridPoint(const Rect& rect)
+	{
+		Array<Point> rtn;
+
+		for (int32 x : Range(rect.x, rect.x + rect.w))
+		{
+			for (int32 y : Range(rect.y, rect.y + rect.h))
+			{
+				rtn.emplace_back(x, y);
+			}
+		}
+
+		return std::move(rtn);
+	}
+
+	int32 randomFrequency(double frequency)
+	{
+		return Random(1.0 / Scene::DeltaTime()) < frequency;
+	}
 }

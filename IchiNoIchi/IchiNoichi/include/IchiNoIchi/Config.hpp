@@ -131,4 +131,15 @@ namespace IchiNoIchi
 		return s_toml[key].get<Type>();
 	}
 
+	template<>
+	inline Array<Point> Config::tomlToValue(const String& key) const
+	{
+		Array<Point> rtn;
+		for (const auto& toml : s_toml[key].tableArrayView())
+		{
+			rtn << Point(toml[U"x"].get<int32>(), toml[U"y"].get<int32>());
+		}
+		return rtn;
+	}
+
 }
