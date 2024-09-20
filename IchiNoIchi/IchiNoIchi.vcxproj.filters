@@ -153,6 +153,9 @@
     <ClCompile Include="IchiNoichi\src\DividingBlockDrawer\DividingBlockDrawer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IchiNoichi\src\Game\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
@@ -826,6 +829,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\DividingBlockDrawer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
