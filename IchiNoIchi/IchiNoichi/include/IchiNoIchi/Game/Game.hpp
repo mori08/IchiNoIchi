@@ -1,8 +1,9 @@
 ﻿#pragma once
-#include <IchiNoIchi/DividingBlockDrawer.hpp>
+#include <IchiNoIchi/Game/ShareData.hpp>
 
 namespace IchiNoIchi
 {
+	/// @brief Main関数に置く
 	class Game
 	{
 	public:
@@ -16,6 +17,9 @@ namespace IchiNoIchi
 
 		/// @brief 描画系の処理まとめ
 		void draw() const;
+
+		// オブジェクト間の共有データ
+		ShareData m_shareData;
 
 	};
 }
