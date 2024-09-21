@@ -1,7 +1,7 @@
 ﻿#include <IchiNoIchi/MyLibrary.hpp>
 #include <IchiNoIchi/Config.hpp>
 #include <IchiNoIchi/DividingBlockDrawer.hpp>
-#include <IchiNoIchi/Game.hpp>
+#include <IchiNoIchi/Game/Game.hpp>
 
 void Main()
 {

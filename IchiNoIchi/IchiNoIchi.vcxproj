@@ -334,7 +334,8 @@
   <ItemGroup>
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Config.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\DividingBlockDrawer.hpp" />
-    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game.hpp" />
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Game.hpp" />
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\ShareData.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\MyLibrary.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
