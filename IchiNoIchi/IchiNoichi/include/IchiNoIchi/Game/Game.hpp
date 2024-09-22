@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <IchiNoIchi/Game/ShareData.hpp>
+#include <IchiNoIchi/Game/Object.hpp>
 
 namespace IchiNoIchi
 {
@@ -20,6 +21,9 @@ namespace IchiNoIchi
 
 		// オブジェクト間の共有データ
 		ShareData m_shareData;
+
+		// オブジェクトのマップ
+		std::map<String, std::shared_ptr<Object>> m_objectMap;
 
 	};
 }
