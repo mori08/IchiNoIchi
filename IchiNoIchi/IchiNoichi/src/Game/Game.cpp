@@ -16,16 +16,30 @@ namespace IchiNoIchi
 
 	void Game::draw() const
 	{
-		// TODO 外
+		for (const auto& object : m_objectMap)
+		{
+			object.second->draw1stLayer();
+		}
 
 		static MSRenderTexture renderTexture(Scene::Size());
 		renderTexture.clear(MyBlack);
 		{
 			const ScopedRenderTarget2D target{ renderTexture };
-			// TODO 頭の中
+			for (const auto& object : m_objectMap)
+			{
+				object.second->draw2ndLayer();
+			}
+
+			for (const auto& object : m_objectMap)
+			{
+				object.second->draw3rdLayer();
+			}
 		}
 		m_shareData.blockDrawer.draw(renderTexture);
 
-		// TODO UI
+		for (const auto& object : m_objectMap)
+		{
+			object.second->draw4thLayer();
+		}
 	}
 }

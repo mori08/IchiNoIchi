@@ -831,7 +831,13 @@
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\DividingBlockDrawer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game.hpp">
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Game.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\ShareData.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Object.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
