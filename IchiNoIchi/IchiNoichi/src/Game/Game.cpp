@@ -23,8 +23,10 @@ namespace IchiNoIchi
 		m_controller.top()->control(m_objectMap, m_shareData);
 
 		if (!m_shareData.control) { return; }
+		ControlStack control = m_shareData.control.value();
+		m_shareData.control = none;
 
-		if (m_shareData.control.value() == ControlStack::POP)
+		if (control == ControlStack::POP)
 		{
 			m_controller.top()->onBeforePop(m_objectMap, m_shareData);
 			m_controller.pop();
@@ -35,7 +37,7 @@ namespace IchiNoIchi
 		{
 			// TODO: Controllerの派生クラスを作成したときここにも追加する
 		};
-		m_controller.push(CREATING_CONTROLLER_MAP[m_shareData.control.value()]());
+		m_controller.push(CREATING_CONTROLLER_MAP[control]());
 		m_controller.top()->onAfterPush(m_objectMap, m_shareData);
 	}
 
