@@ -8,6 +8,10 @@ namespace IchiNoIchi
 	{
 	public:
 
+		using Ptr = std::shared_ptr<Object>;
+
+		using Map = std::unordered_map<String, Ptr>;
+
 		using ActParam = std::unordered_map<String, String>;
 
 		/// @brief オブジェクトへの命令
