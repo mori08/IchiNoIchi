@@ -59,6 +59,12 @@ namespace IchiNoIchi
 		m_alphaMap[block] = m_goalAlphaMap[block] = alpha;
 	}
 
+	void DividingBlockDrawer::setAlpha(double alpha)
+	{
+		for (double block : m_alphaMap) { block = alpha; }
+		for (double block : m_goalAlphaMap) { block = alpha; }
+	}
+
 	void DividingBlockDrawer::setEnv(const String& key)
 	{
 		const Config config_env = config.addTableConfig(key);

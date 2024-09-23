@@ -17,6 +17,10 @@ namespace IchiNoIchi
 		/// @param alpha 不透明度
 		void setAlpha(const Vec2& pos, double alpha);
 
+		/// @brief 全ブロックの不透明度を変更する
+		/// @param alpha 不透明度
+		void setAlpha(double alpha);
+
 		/// @brief ブロックの不透明度を変更するためのパラメータ変更
 		/// @param key Configのテーブル名
 		void setEnv(const String& key);
@@ -28,7 +32,7 @@ namespace IchiNoIchi
 	private:
 
 		// ブロックの１辺の長さ
-		static constexpr int32 BLOCK_LENGTH = 25;
+		static constexpr int32 BLOCK_LENGTH = 20;
 
 		// 横方向のブロック数
 		static constexpr int32 WIDTH = 800 / BLOCK_LENGTH;
