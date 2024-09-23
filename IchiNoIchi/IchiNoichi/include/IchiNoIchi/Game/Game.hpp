@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <IchiNoIchi/Game/ShareData.hpp>
 #include <IchiNoIchi/Game/Object.hpp>
+#include <IchiNoIchi/Game/Controller.hpp>
 
 namespace IchiNoIchi
 {
@@ -16,6 +17,9 @@ namespace IchiNoIchi
 		/// @brief 更新系の処理まとめ
 		void update();
 
+		/// @brief m_controllerの更新
+		void updateController();
+
 		/// @brief 描画系の処理まとめ
 		void draw() const;
 
@@ -23,7 +27,10 @@ namespace IchiNoIchi
 		ShareData m_shareData;
 
 		// オブジェクトのマップ
-		std::map<String, std::shared_ptr<Object>> m_objectMap;
+		Object::Map m_objectMap;
+
+		// オブジェクトの操作
+		Controller::Stack m_controller;
 
 	};
 }
