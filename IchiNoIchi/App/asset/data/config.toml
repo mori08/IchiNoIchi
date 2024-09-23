@@ -17,18 +17,18 @@
 	[DividingBlockDrawer.BlackIn] # 中心に向かって黒く
 		outsideAlpha = 1.0
 		goalUpdateFrequency = 10
-		upAlphaRate = 0
-		downAlphaRate = 0.1
+		upAlphaRate = 1
+		downAlphaRate = 1E-30
 	[DividingBlockDrawer.BlackOut] # 外に向かって黒く
 		outsideAlpha = 0.0
-		goalUpdateFrequency = 30
-		upAlphaRate = 0
+		goalUpdateFrequency = 10
+		upAlphaRate = 1E-30
 		downAlphaRate = 1
 	[DividingBlockDrawer.WhiteIn] # 中心に向かって白く
 		outsideAlpha = 0
 		goalUpdateFrequency = 10
-		upAlphaRate = 0.1
-		downAlphaRate = 0
+		upAlphaRate = 1
+		downAlphaRate = 1E-30
 	[DividingBlockDrawer.Past] # 画面の縁が少し黒く
 		outsideAlpha = 0.5
 		goalUpdateFrequency = 0.1
