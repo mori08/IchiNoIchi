@@ -117,6 +117,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IchiNoichi\src\Game\Title\TitleLogoObject.cpp" />
     <ClCompile Include="IchiNoichi\src\Game\Game.cpp" />
     <ClCompile Include="IchiNoichi\src\DividingBlockDrawer\DividingBlockDrawer.cpp" />
     <ClCompile Include="IchiNoichi\src\Config\Config.cpp" />
@@ -338,6 +339,7 @@
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Game.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Object.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\ShareData.hpp" />
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleLogoObject.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\MyLibrary.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>

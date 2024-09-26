@@ -39,3 +39,11 @@
 		goalUpdateFrequency = 10
 		upAlphaRate = 0.2
 		downAlphaRate = 0.01
+
+[TitleLogoObject]
+	pos = {x = 400, y = 200}
+	rainFrequency = 5
+	height = 600
+	length = 50
+	speed = 1500
+	color = {rgb = 0.7}
