@@ -1,8 +1,14 @@
 ﻿#include <IchiNoIchi/Game/Game.hpp>
 #include <IchiNoIchi/MyLibrary.hpp>
+#include <IchiNoIchi/Game/TitleController.hpp>
 
 namespace IchiNoIchi
 {
+	Game::Game()
+	{
+		m_shareData.control = ControlStack::TITLE;
+	}
+
 	void Game::updateAndDraw()
 	{
 		update();
@@ -18,9 +24,10 @@ namespace IchiNoIchi
 
 	void Game::updateController()
 	{
-		if (m_controller.empty()) { return; }
-
-		m_controller.top()->control(m_objectMap, m_shareData);
+		if (!m_controller.empty())
+		{
+			m_controller.top()->control(m_objectMap, m_shareData);
+		}
 
 		if (!m_shareData.control) { return; }
 		ControlStack control = m_shareData.control.value();
@@ -35,6 +42,7 @@ namespace IchiNoIchi
 
 		static std::unordered_map<ControlStack, std::function<Controller::Ptr()>> CREATING_CONTROLLER_MAP
 		{
+			{ControlStack::TITLE, []() {return std::make_shared<TitleController>(); }}
 			// TODO: Controllerの派生クラスを作成したときここにも追加する
 		};
 		m_controller.push(CREATING_CONTROLLER_MAP[control]());

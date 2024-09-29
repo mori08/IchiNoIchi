@@ -159,6 +159,9 @@
     <ClCompile Include="IchiNoichi\src\Game\Title\TitleLogoObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IchiNoichi\src\Game\Title\TitleController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
@@ -847,6 +850,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleLogoObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleController.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
