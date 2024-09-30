@@ -39,6 +39,9 @@ namespace IchiNoIchi
 	{
 		r = Pow(r, Scene::DeltaTime()); x = r * x + (1 - r) * a;
 	}
+
+	/// @brief Debug用FPS表示
+	void showFPS();
 }
 
 

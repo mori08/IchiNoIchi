@@ -132,6 +132,35 @@ namespace IchiNoIchi
 	}
 
 	template<>
+	inline Point Config::tomlToValue(const String& key) const
+	{
+		return Point(
+			s_toml[key][U"x"].get<int32>(),
+			s_toml[key][U"y"].get<int32>()
+		);
+	}
+
+	template<>
+	inline Rect Config::tomlToValue(const String& key) const
+	{
+		return Rect(
+			s_toml[key][U"x"].get<int32>(),
+			s_toml[key][U"y"].get<int32>(),
+			s_toml[key][U"w"].get<int32>(),
+			s_toml[key][U"h"].get<int32>()
+		);
+	}
+
+	template<>
+	inline ColorF Config::tomlToValue(const String& key) const
+	{
+		return ColorF(
+			s_toml[key][U"rgb"].get<double>(),
+			s_toml[key][U"a"].getOr<double>(1.0)
+		);
+	}
+
+	template<>
 	inline Array<Point> Config::tomlToValue(const String& key) const
 	{
 		Array<Point> rtn;

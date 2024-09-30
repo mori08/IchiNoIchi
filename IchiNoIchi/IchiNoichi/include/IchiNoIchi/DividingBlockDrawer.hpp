@@ -17,6 +17,11 @@ namespace IchiNoIchi
 		/// @param alpha 不透明度
 		void setAlpha(const Vec2& pos, double alpha);
 
+		/// @brief 指定した長方形と交差するブロックの不透明度を変更する
+		/// @param rect 長方形
+		/// @param alpha 不透明度
+		void setAlpha(const RectF& rect, double alpha);
+
 		/// @brief 全ブロックの不透明度を変更する
 		/// @param alpha 不透明度
 		void setAlpha(double alpha);

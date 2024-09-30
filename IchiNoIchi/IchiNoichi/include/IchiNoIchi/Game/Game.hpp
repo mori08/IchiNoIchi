@@ -10,6 +10,8 @@ namespace IchiNoIchi
 	{
 	public:
 
+		Game();
+
 		void updateAndDraw();
 
 	private:

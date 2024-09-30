@@ -7,6 +7,7 @@ namespace IchiNoIchi
 	enum class ControlStack
 	{
 		POP, // 先頭を取り出す
+		TITLE, // タイトル画面
 	};
 
 	/// @brief オブジェクト間で共有するデータ置き場

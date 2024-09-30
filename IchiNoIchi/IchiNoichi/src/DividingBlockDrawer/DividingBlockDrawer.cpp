@@ -59,6 +59,19 @@ namespace IchiNoIchi
 		m_alphaMap[block] = m_goalAlphaMap[block] = alpha;
 	}
 
+	void DividingBlockDrawer::setAlpha(const RectF& rect, double alpha)
+	{
+		const Rect allBlock(
+			(rect.pos / BLOCK_LENGTH).asPoint(),
+			(rect.size / BLOCK_LENGTH).asPoint()
+		);
+
+		for (const auto block : getGridPoint(allBlock))
+		{
+			m_alphaMap[block] = m_goalAlphaMap[block] = alpha;
+		}
+	}
+
 	void DividingBlockDrawer::setAlpha(double alpha)
 	{
 		for (double block : m_alphaMap) { block = alpha; }
