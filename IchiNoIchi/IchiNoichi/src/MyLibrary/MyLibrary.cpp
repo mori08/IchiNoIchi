@@ -93,4 +93,19 @@ namespace IchiNoIchi
 	{
 		return Random(1.0 / Scene::DeltaTime()) < frequency;
 	}
+
+	void showFPS()
+	{
+#ifdef _DEBUG
+		// このフレームのFPS(DelataTimeの逆数)を取得
+		static std::list<double> fpsList(60, 60);
+		fpsList.emplace_back(1.0 / Scene::DeltaTime());
+		fpsList.pop_front();
+
+		for (const auto& fps : fpsList)
+		{
+			Circle(800.0 / 120.0 * fps, 2, 4).draw(ColorF(1, 0, 0, 0.4));
+		}
+#endif // _DEBUG
+	}
 }

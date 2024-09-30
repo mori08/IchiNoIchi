@@ -30,5 +30,7 @@ void Main()
 		IchiNoIchi::Config::reloadOnKeyR();
 
 		game.updateAndDraw();
+
+		IchiNoIchi::showFPS();
 	}
 }
