@@ -141,6 +141,17 @@ namespace IchiNoIchi
 	}
 
 	template<>
+	inline Rect Config::tomlToValue(const String& key) const
+	{
+		return Rect(
+			s_toml[key][U"x"].get<int32>(),
+			s_toml[key][U"y"].get<int32>(),
+			s_toml[key][U"w"].get<int32>(),
+			s_toml[key][U"h"].get<int32>()
+		);
+	}
+
+	template<>
 	inline ColorF Config::tomlToValue(const String& key) const
 	{
 		return ColorF(

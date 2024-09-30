@@ -47,3 +47,9 @@
 	length = 50
 	speed = 1500
 	color = {rgb = 0.7}
+
+[TitleButtonObject]
+	font = "18"
+	startRect = {x=325, y=385, w=150, h=30}
+	exitRect = {x=325, y=435, w=150, h=30}
+	selectedThickness = 1

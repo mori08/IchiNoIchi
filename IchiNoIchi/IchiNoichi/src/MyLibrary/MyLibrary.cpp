@@ -4,6 +4,11 @@ namespace IchiNoIchi
 {
 	void registerResourceAndAsset()
 	{
+		for (int32 size : Range(10, 40))
+		{
+			FontAsset::Register(ToString(size), size, Typeface::Medium);
+		}
+
 #ifdef _DEBUG
 
 		TextReader resourceReader(U"Resource.rc");
