@@ -53,3 +53,7 @@
 	startRect = {x=325, y=385, w=150, h=30}
 	exitRect = {x=325, y=435, w=150, h=30}
 	selectedThickness = 1
+
+[Window]
+	size = {x=800, y=600}
+	title = "-/-"
