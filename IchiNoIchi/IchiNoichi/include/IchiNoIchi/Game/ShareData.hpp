@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include<IchiNoIchi/DividingBlockDrawer.hpp>
+#include<IchiNoIchi/RecordSet.hpp>
 
 namespace IchiNoIchi
 {
@@ -20,6 +21,9 @@ namespace IchiNoIchi
 
 		// m_controllerへの操作
 		Optional<ControlStack> control;
+
+		// セーブデータ
+		RecordSet recordSet;
 
 	};
 }

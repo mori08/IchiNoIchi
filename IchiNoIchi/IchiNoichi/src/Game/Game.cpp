@@ -7,6 +7,7 @@ namespace IchiNoIchi
 	Game::Game()
 	{
 		m_shareData.control = ControlStack::TITLE;
+		m_shareData.recordSet.decryption();
 	}
 
 	void Game::updateAndDraw()
