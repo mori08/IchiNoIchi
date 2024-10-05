@@ -1,0 +1,5 @@
+[[Record]] # 好きな数字
+    name    = "FavoriteNumber"
+    digit   = 12
+    default = 0
+

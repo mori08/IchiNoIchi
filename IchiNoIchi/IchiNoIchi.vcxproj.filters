@@ -165,6 +165,12 @@
     <ClCompile Include="IchiNoichi\src\Game\Title\TitleButtonObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IchiNoichi\src\RecordSet\Record.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IchiNoichi\src\RecordSet\RecordSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
@@ -859,6 +865,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleButtonObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\RecordSet.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Record.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

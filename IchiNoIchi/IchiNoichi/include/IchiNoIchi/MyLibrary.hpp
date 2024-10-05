@@ -23,7 +23,7 @@ namespace IchiNoIchi
 	/// @brief 指定した頻度でランダムに1を出力
 	/// @param frequency 頻度(回/s)
 	/// @return ランダムで 1 or 0
-	/// @remarks
+	/// @remark
 	/// 頻度がフレームレートを超えることは想定していない
 	int32 randomFrequency(double frequency);
 

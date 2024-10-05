@@ -40,6 +40,9 @@
 		upAlphaRate = 0.2
 		downAlphaRate = 0.01
 
+[RecordSet]
+	fileName = "きおく"
+
 [TitleLogoObject]
 	pos = {x = 400, y = 200}
 	rainFrequency = 5

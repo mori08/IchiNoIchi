@@ -117,6 +117,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IchiNoichi\src\RecordSet\RecordSet.cpp" />
+    <ClCompile Include="IchiNoichi\src\RecordSet\Record.cpp" />
     <ClCompile Include="IchiNoichi\src\Game\Title\TitleButtonObject.cpp" />
     <ClCompile Include="IchiNoichi\src\Game\Title\TitleController.cpp" />
     <ClCompile Include="IchiNoichi\src\Game\Title\TitleLogoObject.cpp" />
@@ -345,6 +347,8 @@
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleLogoObject.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\MyLibrary.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleController.hpp" />
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Record.hpp" />
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\RecordSet.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>

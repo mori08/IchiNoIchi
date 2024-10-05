@@ -129,6 +129,7 @@ Resource(engine/soundfont/GMGSx.sf2.zstdcmp)
 
 // from here
 Resource(asset/data/config.toml)
+Resource(asset/data/record.toml)
 Resource(asset/list)
 Resource(asset/shader/DividingBlockDrawer.hlsl)
 Resource(asset/texture/TitleLogo.png)

@@ -1,4 +1,5 @@
 ﻿asset/data/config.toml
+asset/data/record.toml
 asset/list
 asset/shader/DividingBlockDrawer.hlsl
 asset/texture/TitleLogo.png
