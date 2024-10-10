@@ -128,8 +128,9 @@ Resource(engine/soundfont/GMGSx.sf2.zstdcmp)
 //////////////////////////////////////////////////////
 
 // from here
-Resource(asset/audio/title.mp3)
-Resource(asset/audio/walk.mp3)
+Resource(asset/audio/bgm/title.mp3)
+Resource(asset/audio/bgm/walk.mp3)
+Resource(asset/audio/se/select.mp3)
 Resource(asset/data/config.toml)
 Resource(asset/data/record.toml)
 Resource(asset/list)

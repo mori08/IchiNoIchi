@@ -13,10 +13,13 @@ namespace IchiNoIchi
 	{
 		if (config.get<Rect>(U"startRect").mouseOver())
 		{
+			if (!m_selected) { AudioAsset(U"select").playOneShot(); }
 			m_selected = U"startRect";
 		}
 		else if (config.get<Rect>(U"exitRect").mouseOver())
 		{
+			if (!m_selected) { AudioAsset(U"select").playOneShot(); }
+
 			m_selected = U"exitRect";
 
 			if (MouseL.down())
