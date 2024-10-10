@@ -1,4 +1,6 @@
-﻿asset/data/config.toml
+﻿asset/audio/title.mp3
+asset/audio/walk.mp3
+asset/data/config.toml
 asset/data/record.toml
 asset/list
 asset/shader/DividingBlockDrawer.hlsl
