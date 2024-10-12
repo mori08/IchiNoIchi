@@ -7,7 +7,8 @@ namespace IchiNoIchi
 	/// @brief m_controllerへの操作
 	enum class ControlStack
 	{
-		POP, // 先頭を取り出す
+		POP,   // 先頭を取り出す
+		CLEAR, // 全て取り出す
 		TITLE, // タイトル画面
 	};
 
@@ -20,7 +21,7 @@ namespace IchiNoIchi
 		DividingBlockDrawer blockDrawer;
 
 		// m_controllerへの操作
-		Optional<ControlStack> control;
+		std::list<ControlStack> control;
 
 		// セーブデータ
 		RecordSet recordSet;

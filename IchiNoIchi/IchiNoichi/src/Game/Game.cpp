@@ -30,24 +30,36 @@ namespace IchiNoIchi
 			m_controller.top()->control(m_objectMap, m_shareData);
 		}
 
-		if (!m_shareData.control) { return; }
-		ControlStack control = m_shareData.control.value();
-		m_shareData.control = none;
-
-		if (control == ControlStack::POP)
+		if (m_shareData.control.empty()) { return; }
+		for (ControlStack control : m_shareData.control)
 		{
-			m_controller.top()->onBeforePop(m_objectMap, m_shareData);
-			m_controller.pop();
-			return;
+			if (control == ControlStack::POP)
+			{
+				m_controller.top()->onBeforePop(m_objectMap, m_shareData);
+				m_controller.pop();
+				continue;
+			}
+
+			if (control == ControlStack::CLEAR)
+			{
+				while (!m_controller.empty())
+				{
+					m_controller.top()->onBeforePop(m_objectMap, m_shareData);
+					m_controller.pop();
+				}
+				continue;
+			}
+
+			static std::unordered_map<ControlStack, std::function<Controller::Ptr()>> CREATING_CONTROLLER_MAP
+			{
+				{ControlStack::TITLE, []() {return std::make_shared<TitleController>(); }}
+				// TODO: Controllerの派生クラスを作成したときここにも追加する
+			};
+			m_controller.push(CREATING_CONTROLLER_MAP[control]());
+			m_controller.top()->onAfterPush(m_objectMap, m_shareData);
 		}
 
-		static std::unordered_map<ControlStack, std::function<Controller::Ptr()>> CREATING_CONTROLLER_MAP
-		{
-			{ControlStack::TITLE, []() {return std::make_shared<TitleController>(); }}
-			// TODO: Controllerの派生クラスを作成したときここにも追加する
-		};
-		m_controller.push(CREATING_CONTROLLER_MAP[control]());
-		m_controller.top()->onAfterPush(m_objectMap, m_shareData);
+		m_shareData.control.clear();
 	}
 
 	void Game::draw() const
