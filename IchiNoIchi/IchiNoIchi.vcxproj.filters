@@ -171,6 +171,12 @@
     <ClCompile Include="IchiNoichi\src\RecordSet\RecordSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IchiNoichi\src\Game\SelectingChapter\SelectingChapterController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IchiNoichi\src\Game\SelectingChapter\SelectingChapterObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
@@ -871,6 +877,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Record.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\SelectingChapterController.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\SelectingChapterObject.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -207,7 +207,6 @@ namespace IchiNoIchi
 	void RecordSet::printDebug() const
 	{
 #ifdef _DEBUG
-		char32 initChar = U'z';
 		for (const auto& record : m_recordMap)
 		{
 			Print << Pad(ToString(record.second.get()), { 4,U' ' }) + U" < [" + record.first + U"]";
