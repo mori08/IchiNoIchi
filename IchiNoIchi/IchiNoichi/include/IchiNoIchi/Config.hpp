@@ -141,6 +141,15 @@ namespace IchiNoIchi
 	}
 
 	template<>
+	inline Vec2 Config::tomlToValue(const String& key) const
+	{
+		return Vec2(
+			s_toml[key][U"x"].get<double>(),
+			s_toml[key][U"y"].get<double>()
+		);
+	}
+
+	template<>
 	inline Rect Config::tomlToValue(const String& key) const
 	{
 		return Rect(
@@ -158,6 +167,17 @@ namespace IchiNoIchi
 			s_toml[key][U"rgb"].get<double>(),
 			s_toml[key][U"a"].getOr<double>(1.0)
 		);
+	}
+
+	template<>
+	inline Array<String> Config::tomlToValue(const String& key) const
+	{
+		Array<String> rtn;
+		for (const auto& toml : s_toml[key].arrayView())
+		{
+			rtn << toml.getString();
+		}
+		return rtn;
 	}
 
 	template<>

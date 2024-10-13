@@ -17,8 +17,8 @@
 	[DividingBlockDrawer.BlackIn] # 中心に向かって黒く
 		outsideAlpha = 1.0
 		goalUpdateFrequency = 10
-		upAlphaRate = 1
-		downAlphaRate = 1E-30
+		upAlphaRate = 1E-30
+		downAlphaRate = 1
 	[DividingBlockDrawer.BlackOut] # 外に向かって黒く
 		outsideAlpha = 0.0
 		goalUpdateFrequency = 10
@@ -42,6 +42,97 @@
 
 [RecordSet]
 	fileName = "きおく"
+
+[SelectingChapterObject]
+	rectSize = 20
+	doneAlpha = 0x80
+	newAlpha = 0xFF
+	lockAlpha = 0x00
+	frameThickness = 1
+	radius = 60
+	radiusRate = 1E-4
+	radiusShadowBlur = 0.2
+	titleOffset = {x = 0, y = 20}
+	chapterList = [
+		"A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8",
+		"B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9"
+	]
+	[SelectingChapterObject.A0]
+		pos = {x=3,y=6}
+		required = []
+		title = "-0:今日も仕事"
+	[SelectingChapterObject.A1]
+		pos = {x=7,y=5}
+		required = []
+		title = "-1:今日は通院"
+	[SelectingChapterObject.A2]
+		pos = {x=11,y=2}
+		required = []
+		title = "-2:あいつがいた"
+	[SelectingChapterObject.A3]
+		pos = {x=12,y=8}
+		required = []
+		title = "-3:コーヒーの味"
+	[SelectingChapterObject.A4]
+		pos = {x=15,y=11}
+		required = []
+		title = "-4:人は減った"
+	[SelectingChapterObject.A5]
+		pos = {x=21,y=10}
+		required = []
+		title = "-5:親"
+	[SelectingChapterObject.A6]
+		pos = {x=23,y=4}
+		required = []
+		title = "-6:神はいた"
+	[SelectingChapterObject.A7]
+		pos = {x=27,y=12}
+		required = []
+		title = "-7:だめだった"
+	[SelectingChapterObject.A8]
+		pos = {x=30,y=9}
+		required = []
+		title = "-8:記憶を返せ"
+	[SelectingChapterObject.B0]
+		pos = {x=3,y=18}
+		required = []
+		title = "+0:誕生日"
+	[SelectingChapterObject.B1]
+		pos = {x=5,y=22}
+		required = []
+		title = "+1:初めての仕事"
+	[SelectingChapterObject.B2]
+		pos = {x=8,y=16}
+		required = []
+		title = "+2:浮いてる機械"
+	[SelectingChapterObject.B3]
+		pos = {x=10,y=20}
+		required = []
+		title = "+3:面白くない"
+	[SelectingChapterObject.B4]
+		pos = {x=14,y=25}
+		required = []
+		title = "+4:最適解は遠くに"
+	[SelectingChapterObject.B5]
+		pos = {x=17,y=19}
+		required = []
+		title = "+5:危ない"
+	[SelectingChapterObject.B6]
+		pos = {x=20,y=16}
+		required = []
+		title = "+6:ココロのコピー"
+	[SelectingChapterObject.B7]
+		pos = {x=26,y=17}
+		required = []
+		title = "+7:無職"
+	[SelectingChapterObject.B8]
+		pos = {x=31,y=20}
+		required = []
+		title = "+8:ココロは進化する"
+	[SelectingChapterObject.B9]
+		pos = {x=35,y=15}
+		required = []
+		title = "+9:夢が見れない"
 
 [TitleLogoObject]
 	pos = {x = 400, y = 200}

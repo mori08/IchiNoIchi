@@ -117,6 +117,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IchiNoichi\src\Game\SelectingChapter\SelectingChapterObject.cpp" />
+    <ClCompile Include="IchiNoichi\src\Game\SelectingChapter\SelectingChapterController.cpp" />
     <ClCompile Include="IchiNoichi\src\RecordSet\RecordSet.cpp" />
     <ClCompile Include="IchiNoichi\src\RecordSet\Record.cpp" />
     <ClCompile Include="IchiNoichi\src\Game\Title\TitleButtonObject.cpp" />
@@ -342,6 +344,8 @@
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Controller.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Game.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\Object.hpp" />
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\SelectingChapterController.hpp" />
+    <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\SelectingChapterObject.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\ShareData.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleButtonObject.hpp" />
     <ClInclude Include="IchiNoichi\include\IchiNoIchi\Game\TitleLogoObject.hpp" />

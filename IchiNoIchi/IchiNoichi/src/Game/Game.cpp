@@ -1,12 +1,13 @@
 ﻿#include <IchiNoIchi/Game/Game.hpp>
 #include <IchiNoIchi/MyLibrary.hpp>
+#include <IchiNoIchi/Game/SelectingChapterController.hpp>
 #include <IchiNoIchi/Game/TitleController.hpp>
 
 namespace IchiNoIchi
 {
 	Game::Game()
 	{
-		m_shareData.control = ControlStack::TITLE;
+		m_shareData.control = std::list<ControlStack>{ ControlStack::CHAPTER };
 		m_shareData.recordSet.decryption();
 	}
 
@@ -52,9 +53,16 @@ namespace IchiNoIchi
 
 			static std::unordered_map<ControlStack, std::function<Controller::Ptr()>> CREATING_CONTROLLER_MAP
 			{
-				{ControlStack::TITLE, []() {return std::make_shared<TitleController>(); }}
+				{ControlStack::TITLE  , []() {return std::make_shared<TitleController>(); }},
+				{ControlStack::CHAPTER, []() {return std::make_shared<SelectingChapterController>(); }}
 				// TODO: Controllerの派生クラスを作成したときここにも追加する
 			};
+
+			if (!CREATING_CONTROLLER_MAP.count(control))
+			{
+				throw Error(U"(Game) 登録されていないControllerが指定された");
+			}
+
 			m_controller.push(CREATING_CONTROLLER_MAP[control]());
 			m_controller.top()->onAfterPush(m_objectMap, m_shareData);
 		}

@@ -7,9 +7,10 @@ namespace IchiNoIchi
 	/// @brief m_controllerへの操作
 	enum class ControlStack
 	{
-		POP,   // 先頭を取り出す
-		CLEAR, // 全て取り出す
-		TITLE, // タイトル画面
+		POP,     // 先頭を取り出す
+		CLEAR,   // 全て取り出す
+		TITLE,   // タイトル画面
+		CHAPTER, // 章選択画面
 	};
 
 	/// @brief オブジェクト間で共有するデータ置き場
