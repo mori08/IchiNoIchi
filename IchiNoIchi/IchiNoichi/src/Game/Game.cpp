@@ -7,7 +7,7 @@ namespace IchiNoIchi
 {
 	Game::Game()
 	{
-		m_shareData.control = std::list<ControlStack>{ ControlStack::CHAPTER };
+		m_shareData.control = ControllerList{ ControlStack::TITLE };
 		m_shareData.recordSet.decryption();
 	}
 

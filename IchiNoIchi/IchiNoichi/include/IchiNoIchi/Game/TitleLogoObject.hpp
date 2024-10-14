@@ -13,8 +13,6 @@ namespace IchiNoIchi
 
 		void draw1stLayer() const override;
 
-		void draw2ndLayer() const override;
-
 	private:
 
 		// 雨演出用（雨の着地点、高さ）

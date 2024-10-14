@@ -15,11 +15,18 @@ namespace IchiNoIchi
 		{
 			if (!m_selected) { AudioAsset(U"select").playOneShot(); }
 			m_selected = U"startRect";
+
+			if (MouseL.down())
+			{
+				// 決定音
+				AudioAsset(U"push").playOneShot();
+				shareData.blockDrawer.setAlpha(Cursor::PosF(), 1.0);
+				shareData.control = ControllerList{ ControlStack::CHAPTER };
+			}
 		}
 		else if (config.get<Rect>(U"exitRect").mouseOver())
 		{
 			if (!m_selected) { AudioAsset(U"select").playOneShot(); }
-
 			m_selected = U"exitRect";
 
 			if (MouseL.down())
