@@ -33,6 +33,11 @@ namespace IchiNoIchi
 
 			if (chapterRect.mouseOver())
 			{
+				if (m_selectingCircle.r == 0)
+				{
+					AudioAsset(U"select").playOneShot();
+				}
+
 				m_selectingCircle.center = chapterRect.center();
 				internalDividingPoint(
 					m_selectingCircle.r,

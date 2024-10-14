@@ -1,9 +1,9 @@
 ﻿asset/audio/bgm/title.mp3
 asset/audio/bgm/walk.mp3
+asset/audio/se/push.mp3
 asset/audio/se/select.mp3
 asset/data/config.toml
 asset/data/record.toml
 asset/list
 asset/shader/DividingBlockDrawer.hlsl
 asset/texture/TitleLogo.png
-asset/texture/TitleLogoBack.png

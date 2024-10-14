@@ -42,9 +42,4 @@ namespace IchiNoIchi
 			).draw(config.get<ColorF>(U"color"));
 		}
 	}
-
-	void TitleLogoObject::draw2ndLayer() const
-	{
-		TextureAsset(U"TitleLogoBack").drawAt(config.get<Point>(U"pos"));
-	}
 }

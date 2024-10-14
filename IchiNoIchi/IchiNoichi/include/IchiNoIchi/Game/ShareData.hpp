@@ -13,6 +13,8 @@ namespace IchiNoIchi
 		CHAPTER, // 章選択画面
 	};
 
+	using ControllerList = std::list<ControlStack>;
+
 	/// @brief オブジェクト間で共有するデータ置き場
 	class ShareData
 	{
