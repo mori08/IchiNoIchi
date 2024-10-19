@@ -1,4 +1,5 @@
 ﻿#include <IchiNoIchi/Config.hpp>
+#include <IchiNoIchi/Game/SelectingChapterController.hpp>
 #include <IchiNoIchi/Game/TitleButtonObject.hpp>
 #include <IchiNoIchi/MyLibrary.hpp>
 
@@ -21,7 +22,10 @@ namespace IchiNoIchi
 				// 決定音
 				AudioAsset(U"push").playOneShot();
 				shareData.blockDrawer.setAlpha(Cursor::PosF(), 1.0);
-				shareData.control = ControllerList{ ControlStack::CHAPTER };
+				shareData.control =
+				{
+					pushCtrlr<SelectingChapterController>()
+				};
 			}
 		}
 		else if (config.get<Rect>(U"exitRect").mouseOver())
