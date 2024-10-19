@@ -1,19 +1,23 @@
 ﻿#pragma once
-#include<IchiNoIchi/DividingBlockDrawer.hpp>
-#include<IchiNoIchi/RecordSet.hpp>
+#include <IchiNoIchi/DividingBlockDrawer.hpp>
+#include <IchiNoIchi/RecordSet.hpp>
 
 namespace IchiNoIchi
 {
-	/// @brief m_controllerへの操作
-	enum class ControlStack
-	{
-		POP,     // 先頭を取り出す
-		CLEAR,   // 全て取り出す
-		TITLE,   // タイトル画面
-		CHAPTER, // 章選択画面
-	};
+	class Object;
+	class Controller;
+	class ShareData;
 
-	using ControllerList = std::list<ControlStack>;
+	/// @brief Controller::Stackへの操作
+	/// @remarks
+	/// void(Controller::Stack&, Object::Map&, ShareData&)
+	using ControllerOperation = std::function<
+		void(
+			std::stack<std::shared_ptr<Controller>>&,
+			std::unordered_map<String, std::shared_ptr<Object>>&,
+			ShareData&
+		)
+	>;
 
 	/// @brief オブジェクト間で共有するデータ置き場
 	class ShareData
@@ -24,7 +28,7 @@ namespace IchiNoIchi
 		DividingBlockDrawer blockDrawer;
 
 		// m_controllerへの操作
-		std::list<ControlStack> control;
+		std::list<ControllerOperation> control;
 
 		// セーブデータ
 		RecordSet recordSet;
